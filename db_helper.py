@@ -9,8 +9,8 @@ def create_booking(name, email, date_time,service,price):
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="root",  # Change if needed
-            database="booking_db"  # Must match your actual DB
+            password="root", 
+            database="booking_db" 
         )
         cursor = conn.cursor()
 
