@@ -1,0 +1,29 @@
+CREATE DATABASE booking_db;
+
+CREATE TABLE Bookings (
+book_id INT PRIMARY KEY AUTO_INCREMENT,
+UserID INT,
+ServiceID INT,
+Date DATE,
+email VARCHAR(255),
+customer_name varchar(255),
+FOREIGN KEY (UserID) REFERENCES Customers(UserID),
+FOREIGN KEY (ServicesID) REFERENCES Services(ServicesID)
+);
+CREATE TABLE Customer (
+UserID INT PRIMARY KEY AUTO_INCREMENT,
+Username VARCHAR(50) NOT NULL,
+email VARCHAR(100) NOT NULL);
+
+CREATE TABLE Consultants(
+ConsultantID INT PRIMARY KEY AUTO_INCREMENT,
+Consultantname VARCHAR(50) NOT NULL,
+Email VARCHAR(100) NOT NULL,
+time_free DATETIME );
+
+CREATE TABLE Services (
+ServiceID INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(255),
+Price DECIMAL(10,2),
+Description TEXT
+);
