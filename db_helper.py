@@ -8,8 +8,8 @@ def create_booking(name, email, date_time,service,price):
         # Connect to MySQL
         conn = mysql.connector.connect(
             host="localhost",
-            user="root",
-            password="root", 
+            user="secrets",
+            password="topsecret", 
             database="booking_db" 
         )
         cursor = conn.cursor()
