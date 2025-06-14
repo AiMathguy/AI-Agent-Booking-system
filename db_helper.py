@@ -6,6 +6,7 @@ from datetime import datetime
 def create_booking(name, email, date_time,service,price):
     try:
         # Connect to MySQL
+        # You would need to replace these with the actual data but for security purposes lets rather not and keep it as dummy info
         conn = mysql.connector.connect(
             host="localhost",
             user="secrets",
